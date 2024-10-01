@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+import Login from './components/Login/Login';
+import Footer from './components/Footer/Footer'; 
 
-function App() {
+const Layout = ({ children }) => {
+  const location = useLocation(); 
+
+  const hideFooter = location.pathname === '/login' || location.pathname === '/signup';
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>{children}</div>
+      {!hideFooter && <Footer />} 
+    </>
   );
-}
+};
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
+  );
+};
 
 export default App;
