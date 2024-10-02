@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import Login from './components/Login/Login';
 import Footer from './components/Footer/Footer'; 
+import Signup from './components/Login/Signup';
 
 const Layout = ({ children }) => {
   const location = useLocation(); 
@@ -22,6 +23,7 @@ const App = () => {
       <Layout>
         <Routes>
           <Route path="/login" element={<Login />} />
+          <Route path="/Signup" element={<Signup />} />
         </Routes>
       </Layout>
     </BrowserRouter>
