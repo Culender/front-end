@@ -15,24 +15,7 @@ body {
     max-width: 420px;
     height: 100vh;
     min-height: 844px;
-    position: relative;
-    background-color:beige;
-}
-
-.container::before {
-    content: "";
     position: absolute;
-    right: 0;
-    top: 0;
-    display: block;
-    width: 100%;
-    min-width: 390px;
-    max-width: 420px;
-    height: 100vh;
-    min-height: 844px;
-    background-position: center top;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .none {

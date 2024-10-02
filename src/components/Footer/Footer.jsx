@@ -19,6 +19,7 @@ const Footer = () => {
   };
 
   return (
+    <div className="footer_wrap container">
     <footer className="footer">
       <div className="footer-content">
         <img
@@ -57,6 +58,7 @@ const Footer = () => {
         />
       </div>
     </footer>
+    </div>
   );
 };
 
