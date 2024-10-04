@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import BeforeIcon1 from "../../assets/img/Footer/Icon1.svg";
 import BeforeIcon2 from "../../assets/img/Footer/Icon2.svg";
@@ -13,13 +14,19 @@ import AfterIcon5 from "../../assets/img/Footer/Icon55.svg";
 
 const Footer = () => {
   const [selectedIcon, setSelectedIcon] = useState(''); 
+  const navigate = useNavigate(); 
 
   const handleIconClick = (iconName) => {
     setSelectedIcon(iconName);
+
+    if (iconName === 'icon2') {
+      navigate('/calendar'); 
+    } else if (iconName === 'icon3') {
+      navigate('/record'); 
+    }
   };
 
   return (
-    <div className="footer_wrap container">
     <footer className="footer">
       <div className="footer-content">
         <img
@@ -40,7 +47,7 @@ const Footer = () => {
           src={selectedIcon === 'icon3' ? AfterIcon3 : BeforeIcon3}
           alt="Icon 3"
           className="icon"
-          onClick={() => handleIconClick('icon3')}
+          onClick={() => handleIconClick('icon3')} 
         />
         
         <img
@@ -58,7 +65,6 @@ const Footer = () => {
         />
       </div>
     </footer>
-    </div>
   );
 };
 

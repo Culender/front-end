@@ -15,7 +15,7 @@ html, body {
       display: flex;
       justify-content: flex-start; 
       width: 100%;
-      padding: 10px 20px;
+      padding: 5px 10px;
   
       .back-button {
         display: flex;
@@ -23,11 +23,12 @@ html, body {
         background: none;
         border: none;
         cursor: pointer;
+        margin-top: -20px;
+        margin-left: 23px;
   
         img {
           width: 20px; 
           height: 20px;
-          margin-left: 15px;
         }
   
         .back-text {
