@@ -1,14 +1,17 @@
 {
   "name": "groom",
   "version": "0.1.0",
-  "proxy": "https://naveropenapi.apigw.ntruss.com",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.7.7",
+    "cors-anywhere": "^0.4.4",
     "exifreader": "^4.23.5",
+    "express": "^4.21.0",
+    "http-proxy-middleware": "^3.0.2",
     "openai": "^4.67.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -42,5 +45,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://3.36.209.83:8080"
 }
