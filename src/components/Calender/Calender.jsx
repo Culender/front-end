@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import LeftArrow from '../../assets/img/Calender/<.svg';
-import RightArrow from '../../assets/img/Calender/>.svg';
+import LeftArrow from '../../assets/img/Calender/left.svg';
+import RightArrow from '../../assets/img/Calender/right.svg';
 
 const Calendar = () => {
   const [currentMonth, setCurrentMonth] = useState(new Date());

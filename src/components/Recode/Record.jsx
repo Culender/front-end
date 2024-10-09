@@ -119,6 +119,16 @@ const Record = () => {
     videoRef.current.srcObject.getTracks().forEach(track => track.stop());
   };
 
+  const resetForm = () => {
+    setImage(null);
+    setImageData({
+      date: '',
+      title: '',
+      location: '',
+      review: '',
+    });
+  };
+
   const handleSubmit = async () => {
     const token = localStorage.getItem('token');
     console.log('현재 사용 중인 토큰:', token);
@@ -146,7 +156,8 @@ const Record = () => {
       });
 
       console.log('성공적으로 업로드되었습니다:', response.data);
-      setShowSuccessPopup(true); 
+      setShowSuccessPopup(true);
+      resetForm(); 
     } catch (error) {
       if (error.response) {
         console.error('서버 응답 오류:', error.response.data);
