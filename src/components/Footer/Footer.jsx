@@ -23,6 +23,13 @@ const Footer = () => {
       navigate('/calendar'); 
     } else if (iconName === 'icon3') {
       navigate('/record'); 
+    } else if (iconName === 'icon1') {
+      navigate('/feed'); 
+    } else if (iconName === 'icon5') {
+      navigate('/mypage'); 
+    }
+    else if (iconName === 'icon4') {
+      navigate('/commu'); 
     }
   };
 
