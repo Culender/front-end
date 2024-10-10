@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import calendarLogo from '../../assets/img/Login/Culender. 1.svg';
+
 
 const Login = () => {
   const [loginId, setLoginId] = useState('');
@@ -55,37 +57,35 @@ const Login = () => {
   };
 
   return (
-    <div className="login_wrap container">
-      <div className="logo">
-        {/* 로고 이미지 삽입 */}
+  <div className="login_wrap container">
+    <img src={calendarLogo} alt="Calendar Logo" className="logo" />
+    <form className="login-form" onSubmit={handleLogin}>
+      <div className="input-group">
+        <label htmlFor="userId">아이디</label>
+        <input
+         type="text"
+         id="userId"
+         placeholder="아이디를 입력해주세요"
+         value={loginId}
+         onChange={(e) => setLoginId(e.target.value)}
+        />
+     </div>
+     <div className="input-group">
+       <label htmlFor="password">비밀번호</label>
+        <input
+        type="password"
+        id="password"
+        placeholder="비밀번호를 입력해주세요"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
       </div>
-      <form className="login-form" onSubmit={handleLogin}>
-        <div className="input-group">
-          <label htmlFor="userId">아이디</label>
-          <input
-            type="text"
-            id="userId"
-            placeholder="아이디를 입력해주세요"
-            value={loginId}
-            onChange={(e) => setLoginId(e.target.value)}
-          />
-        </div>
-        <div className="input-group">
-          <label htmlFor="password">비밀번호</label>
-          <input
-            type="password"
-            id="password"
-            placeholder="비밀번호를 입력해주세요"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button type="submit" className="login-button">로그인</button>
-      </form>
-      <div className="signup-link">
-        <a href="/signup">회원가입하기</a>
-      </div>
+      <button type="submit" className="login-button">로그인</button>
+    </form>
+    <div className="signup-link">
+      <a href="/signup">회원가입하기</a>
     </div>
+  </div>
   );
 }
 
