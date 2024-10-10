@@ -14,7 +14,7 @@
 
   label {
     font-size: 16px;
-    margin-bottom: 7px;
+    margin-bottom: 5px;
     display: block;
   }
 
@@ -58,40 +58,37 @@
     padding: 15px;
     border: 1px solid var(--gray);
     border-radius: 10px;
-    margin: 0 auto 20px;
+    margin: 0 auto 10px;
   }
 
   .review-input {
-    height: 100px;
+    height: 90px;
     resize: none;
   }
 
   .button-group {
     display: flex;
-    justify-content: space-between;
-    width: 90%;
     max-width: 350px;
-    margin-left: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: fixed; 
+    bottom: 9%; 
+    left: 73%; 
+
 
     button {
-      padding: 10px 20px;
+      padding: 10px 30px;
       border: none;
       border-radius: 10px;
       cursor: pointer;
       background-color: var(--maincolor);
       color: white;
     }
-
-    .ai-suggestion {
-      margin-left: 150px;
-    }
-
-    .save-button {
-      margin-left: 250px;
-    }
   }
 
-  .popup, .camera-popup {
+
+  .popup, .camera-popup, .success-popup {
     position: fixed;
     top: 0;
     left: 0;
@@ -101,6 +98,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .success-popup {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--maincolor);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
   }
 
   .popup-content, .camera-popup-content {

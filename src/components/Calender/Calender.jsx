@@ -1,11 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import LeftArrow from '../../assets/img/Calender/left.svg';
 import RightArrow from '../../assets/img/Calender/right.svg';
 
 const Calendar = () => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
+  const [highlightedDates, setHighlightedDates] = useState([]);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchHighlightedDates = async () => {
+      try {
+        const token = localStorage.getItem('token'); 
+        const response = await axios.get('/api/record/getMyRecord', {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'application/json',
+          },
+        });
+        
+        if (response.data.status === 200 && response.data.data.length > 0) {
+          const dates = response.data.data.map(record => {
+            return `${record.year}-${String(record.month).padStart(2, '0')}-${String(record.day).padStart(2, '0')}`;
+          });
+          setHighlightedDates(dates);
+        }
+      } catch (error) {
+        console.error('Error fetching records:', error);
+      }
+    };
+
+    fetchHighlightedDates();
+  }, [currentMonth]); 
 
   const handleMonthChange = (direction) => {
     setCurrentMonth(prevMonth => {
@@ -67,10 +94,10 @@ const Calendar = () => {
   };
 
   const isHighlightedDate = (date) => {
-    const highlightedDates = ['2024-09-06', '2024-09-11', '2024-09-16', '2024-09-26'];
-    return highlightedDates.includes(date.toISOString().split('T')[0]);
+    const localDate = new Date(date.getTime() - date.getTimezoneOffset() * 60000);
+    return highlightedDates.includes(localDate.toISOString().split('T')[0]);
   };
-
+  
   return (
     <div className="calendar_wrap container">
       <div className="calendar-header-section">
