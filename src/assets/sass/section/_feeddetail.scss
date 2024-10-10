@@ -68,9 +68,13 @@
             div{
                 display: flex;
                 justify-content: space-between;
-                .text_when{
-                    margin-right: 40%;
-                }
+            }
+            .text_writer{
+                margin-bottom: 5px;
+            }
+            .text_title{
+                margin-bottom: 8px;
+                margin-right: 20px;
             }
         }
         
@@ -88,16 +92,21 @@
             }
 
             .name {
+                margin: 0;
                 font-size: 14px;
                 font-weight: bold;
                 color: #000;
                 margin-right: 12px;
             }
             .text{
+                margin: 0;
                 font-size: 14px;
                 font-weight: bold;
                 color: #000;
             }
+        }
+        p{
+            margin-left: 26px;
         }
         .bottom{
             width: 100%;

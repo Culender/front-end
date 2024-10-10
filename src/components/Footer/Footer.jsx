@@ -24,7 +24,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <img
-          src={location.pathname === '/home' ? AfterIcon1 : BeforeIcon1}
+          src={location.pathname === '/feed' ? AfterIcon1 : BeforeIcon1}
           alt="Icon 1"
           className="icon"
           onClick={() => handleIconClick('icon1', '/feed')}
@@ -45,14 +45,14 @@ const Footer = () => {
         />
         
         <img
-          src={location.pathname === '/community' ? AfterIcon4 : BeforeIcon4}
+          src={location.pathname === '/commu' ? AfterIcon4 : BeforeIcon4}
           alt="Icon 4"
           className="icon"
           onClick={() => handleIconClick('icon4', '/commu')}
         />
         
         <img
-          src={location.pathname === '/profile' ? AfterIcon5 : BeforeIcon5}
+          src={location.pathname === '/mypage' ? AfterIcon5 : BeforeIcon5}
           alt="Icon 5"
           className="icon"
           onClick={() => handleIconClick('icon5', '/mypage')}
