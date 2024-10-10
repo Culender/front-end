@@ -7,6 +7,9 @@ const Mypage = () => {
     const clickCommuLike=()=>{
         navigate("/CommuLike")
     }
+    const clickfeedLike=()=>{
+        navigate("/Interest")
+    }
     return (
         <div className='mypage_wrap'>
             <div className="header">
@@ -14,7 +17,7 @@ const Mypage = () => {
             </div>
             <div className="profile_div">
                 <img src={profile} alt="" />
-                <p className="name">닉네임</p>
+                <p className="name">주연</p>
             </div>
             <hr />
             <div className="view_wrap">
@@ -26,7 +29,7 @@ const Mypage = () => {
             </div>
             <div className="history">
                 <p className="title">나의 기록</p>
-                <div className="history_div">
+                <div className="history_div" onClick={clickfeedLike}>
                     <img src={profile} alt="" className="icon" />
                     <p className="history_title">관심 관람 목록</p>
                 </div>
@@ -34,17 +37,13 @@ const Mypage = () => {
                     <img src={profile} alt="" className="icon" />
                     <p className="history_title">관심 커뮤니티 목록</p>
                 </div>
-                <div className="history_div">
-                    <img src={profile} alt="" className="icon" />
-                    <p className="history_title">댓글 이력</p>
-                </div>
             </div>
             <hr />
             <div className="profile_setting">
                 <p className="title">계정 설정</p>
                 <div className="history_div">
                     <img src={profile} alt="" className="icon" />
-                    <p className="history_title">관심 관람 목록</p>
+                    <p className="history_title">로그아웃</p>
                 </div>
             </div>
         </div>

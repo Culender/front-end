@@ -78,6 +78,7 @@
             }
 
             .name {
+                margin: 0;
                 font-size: 14px;
                 font-weight: bold;
                 color: #000;
@@ -85,10 +86,14 @@
             }
 
             .text {
+                margin: 0;
                 font-size: 14px;
                 font-weight: bold;
                 color: #000;
             }
+        }
+        p{
+            margin-left: 26px;
         }
         .bottom{
             width: 100%;
