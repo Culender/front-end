@@ -1,0 +1,128 @@
+.mypage_wrap {
+    .header {
+        padding: 20px 29px;
+
+        p {
+            margin: 0;
+            padding: 0;
+            font-size: 17px;
+            font-weight: bold;
+            color: black;
+        }
+    }
+
+    .profile_div {
+        display: flex;
+        align-items: center;
+        margin-top: 37px;
+        margin-bottom: 14.74px;
+
+        img {
+            width: 65px;
+            margin-left: 28px;
+            margin-right: 22px;
+        }
+
+        .name {
+            font-size: 17px;
+            font-weight: bold;
+            color: #000;
+        }
+    }
+
+    hr {
+        border: 0.5px solid #0066FF;
+        margin-left: 28px;
+        margin-right: 28px;
+    }
+
+    .title {
+        font-size: 17px;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
+
+    .view_wrap {
+        margin-top: 27.5px;
+        margin-left: 28px;
+
+        .view_div {
+            display: flex;
+            margin-top: 13px;
+            margin-bottom: 45px;
+
+            .view_list {
+                display: flex;
+                width: 76px;
+                height: 32px;
+                border-radius: 9.14px;
+                background-color: #73ABFF;
+                color: #ffffff;
+                align-items: center;
+                justify-content: center;
+                font-size: 14px;
+                font-weight: bold;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .history {
+        margin-left: 28px;
+        padding-bottom: 11.5px;
+
+        .title {
+            margin-bottom: 22px;
+        }
+
+        .history_div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+
+            img {
+                width: 22px;
+                height: 22px;
+                margin-right: 14px;
+            }
+
+            p {
+                margin: 0;
+                padding: 0;
+                font-size: 17px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .profile_setting {
+        margin-top: 21.5px;
+        margin-left: 28px;
+        padding-bottom: 11.5px;
+
+        .title {
+            margin-bottom: 22px;
+        }
+
+        .history_div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+
+            img {
+                width: 22px;
+                height: 22px;
+                margin-right: 14px;
+            }
+
+            p {
+                margin: 0;
+                padding: 0;
+                font-size: 17px;
+                font-weight: 600;
+            }
+        }
+    }
+
+}

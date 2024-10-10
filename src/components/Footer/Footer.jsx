@@ -27,7 +27,7 @@ const Footer = () => {
           src={location.pathname === '/home' ? AfterIcon1 : BeforeIcon1}
           alt="Icon 1"
           className="icon"
-          onClick={() => handleIconClick('icon1', '/home')}
+          onClick={() => handleIconClick('icon1', '/feed')}
         />
         
         <img
@@ -48,14 +48,14 @@ const Footer = () => {
           src={location.pathname === '/community' ? AfterIcon4 : BeforeIcon4}
           alt="Icon 4"
           className="icon"
-          onClick={() => handleIconClick('icon4', '/community')}
+          onClick={() => handleIconClick('icon4', '/commu')}
         />
         
         <img
           src={location.pathname === '/profile' ? AfterIcon5 : BeforeIcon5}
           alt="Icon 5"
           className="icon"
-          onClick={() => handleIconClick('icon5', '/profile')}
+          onClick={() => handleIconClick('icon5', '/mypage')}
         />
       </div>
     </footer>
